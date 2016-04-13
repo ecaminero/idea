@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from openerp import http
 
-# class Idea(http.Controller):
-#     @http.route('/idea/idea/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+
+class Idea(http.Controller):
+    
+    @http.route('/idea/idea/', auth='public')
+    def index(self, **kw):
+        return "Hello, world"
 
 #     @http.route('/idea/idea/objects/', auth='public')
 #     def list(self, **kw):

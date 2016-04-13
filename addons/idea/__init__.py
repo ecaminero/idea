@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from . import controllers
-from . import models
+from controllers import idea
+
+from .models import Voto
+from .models import Idea
+from .models import Grupo
