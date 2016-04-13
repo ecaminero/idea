@@ -1,5 +1,25 @@
 <openerp>
     <data>
+        <template id="index">
+            <title>Ideas</title>
+             <table class="cr-table" style="height:200px;margin-top:0px">
+                 <thead class="cr-th">
+                    <tr>
+                        <th>Id#</th>
+                        <th>Nombre</th>
+                        <th >Descripcion</th>
+                    </tr>
+                </thead>
+                 <tbody class="cr-tbody" style="height:100%">
+                     <tr t-foreach="ideas" t-as="idea">
+                        <td><span t-field="idea.id"/></td>
+                        <td><span t-field="idea.nombre"/></td>
+                        <td><span t-field="idea.descripcion"/></td>
+                    </tr>
+                 </tbody>
+             </table>
+
+        </template>
         <!-- <template id="listing"> -->
         <!--   <ul> -->
         <!--     <li t-foreach="objects" t-as="object"> -->
@@ -20,3 +40,4 @@
         <!-- </template> -->
     </data>
 </openerp>
+

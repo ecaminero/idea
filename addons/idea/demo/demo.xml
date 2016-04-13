@@ -1,10 +1,41 @@
 <openerp>
     <data>
-        <!--  -->
-        <!--   <record id="object0" model="idea.idea"> -->
-        <!--     <field name="name">Object 0</field> -->
-        <!--     <field name="value">0</field> -->
-        <!--   </record> -->
+       <record model="idea.idea">
+            <field name="nombre">Eiusmod tempor incididunt </field>
+            <field name="descripcion">qweqweqweqweqweq</field>
+            <field name="grupo">1</field>
+            <field name="fecha_inicio">2016-04-13 05:27:43.931101</field>
+            <field name="fecha_fin">2016-04-13 05:27:43.931101</field>
+            <field name="calificacion">0</field>
+            <field name="create_uid">1</field>
+       </record>
+       <record model="idea.idea">
+            <field name="nombre">Lorem Ipsum es simplemente</field>
+            <field name="descripcion">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</field>
+            <field name="grupo">1</field>
+            <field name="fecha_inicio">2016-04-13 05:27:43.931101</field>
+            <field name="fecha_fin">2016-04-13 05:27:43.931101</field>
+            <field name="calificacion">0</field>
+            <field name="create_uid">1</field>
+       </record>
+       <record model="idea.idea">
+            <field name="nombre">texto de relleno de las </field>
+            <field name="descripcion">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</field>
+            <field name="grupo">1</field>
+            <field name="fecha_inicio">2016-04-13 05:27:43.931101</field>
+            <field name="fecha_fin">2016-04-13 05:27:43.931101</field>
+            <field name="calificacion">0</field>
+            <field name="create_uid">1</field>
+       </record>
+       <record model="idea.idea">
+            <field name="nombre">simplemente el texto 0</field>
+            <field name="descripcion">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</field>
+            <field name="grupo">1</field>
+            <field name="fecha_inicio">2016-04-13 05:27:43.931101</field>
+            <field name="fecha_fin">2016-04-13 05:27:43.931101</field>
+            <field name="calificacion">0</field>
+            <field name="create_uid">1</field>
+       </record>
         <!--  -->
         <!--   <record id="object1" model="idea.idea"> -->
         <!--     <field name="name">Object 1</field> -->
