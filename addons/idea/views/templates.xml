@@ -8,6 +8,7 @@
                         <th>Id#</th>
                         <th>Nombre</th>
                         <th >Descripcion</th>
+                        <th >Votar</th>
                     </tr>
                 </thead>
                  <tbody class="cr-tbody" style="height:100%">
