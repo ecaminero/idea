@@ -1,0 +1,118 @@
+# Python
+__pycache__/
+*.orig
+*.py[cod]
+*.rej
+*.so
+
+# Distribution / packaging
+bin/
+upload/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+*.egg-info/
+.installed.cfg
+
+# package management formats
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+
+# Unit test
+.tox/
+.cache
+nosetests.xml
+
+# Installer logs
+pip-log.txt
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# OSX generated files / Django stuff
+.DS_Store?
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+*~
+*.log
+*.pot
+
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.editorconfig
+
+# Commpressed files
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.csv
+
+# SublimeText project files
+*.sublime-workspace
+
+# Eclipse projects
+.settings
+.project
+
+
+logs/*
+db.sqlite3
+*.idea/*
+.idea/
+*.iml
+*.iws
+
+# Virtual enviroment
+.venv/
+
+# Uploads de documentos
+documents/
+
+# Ficheros Node - NPM - Yeoman
+node_modules/
+test/bower_components/
+bower_components/
+.sass-cache/
+.tmp/
+dist/
+
+#virtualenv
+_virtualenv_path_extensions.pth
+### Vagrant template
+.vagrant/
+odoo/
+odoo-9.0/
+Vagrantfile
+addons/oepetstore/
