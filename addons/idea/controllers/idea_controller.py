@@ -12,12 +12,21 @@ class IdeaController(http.Controller):
     def crear(self, **kw):
         return "Hello, world"
 
-    @http.route('/idea/votar/', auth='public')
-    def votar(self, **kw):
+    @http.route('/idea/listar/', auth='public')
+    def listar(self, **kw):
         Idea = http.request.env['idea.idea']
-        return http.request.render('idea.index', {
+        return http.request.render('idea.listar', {
             'ideas': Idea.search([])
         })
+
+    @http.route('/idea/votar/<int:idObject>/', auth='public')
+    def votar(self, idObject):
+        Idea = http.request.env['idea.idea']
+        print(idObject)
+        return http.request.render('idea.votar', {
+            'idea': Idea.search([('id', '=', idObject)])[0]
+        })
+
 #     @http.route('/idea/idea/objects/', auth='public')
 #     def list(self, **kw):
 #         return http.request.render('idea.listing', {
