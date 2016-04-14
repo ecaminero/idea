@@ -16,13 +16,11 @@
     -->
 
     <!-- actions opening views on models -->
-    <!--
     <record model="ir.actions.act_window" id="idea.action_window">
       <field name="name">idea window</field>
       <field name="res_model">idea.idea</field>
-      <field name="view_mode">tree,form</field>
     </record>
-    -->
+
 
     <!-- server action to the one above -->
     <!--
@@ -40,20 +38,12 @@
     -->
 
     <!-- Top menu item -->
-    <!--
     <menuitem name="idea" id="idea.menu_root"/>
-    -->
     <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="idea.menu_1" parent="idea.menu_root"/>
-    <menuitem name="Menu 2" id="idea.menu_2" parent="idea.menu_root"/>
-    -->
+    <menuitem name="Acciones" id="idea.menu_1" parent="idea.menu_root"/>
     <!-- actions -->
-    <!--
     <menuitem name="List" id="idea.menu_1_list" parent="idea.menu_1"
               action="idea.action_window"/>
-    <menuitem name="Server to list" id="idea" parent="idea.menu_2"
-              action="idea.action_server"/>
-    -->
+
   </data>
 </openerp>

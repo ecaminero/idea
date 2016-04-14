@@ -12,14 +12,14 @@ class IdeaController(http.Controller):
     def crear(self, **kw):
         return "Hello, world"
 
-    @http.route('/idea/listar/', auth='public')
+    @http.route('/idea/listar/', auth='user')
     def listar(self, **kw):
         Idea = http.request.env['idea.idea']
         return http.request.render('idea.listar', {
             'ideas': Idea.search([])
         })
 
-    @http.route('/idea/votar/<int:idObject>/', auth='public')
+    @http.route('/idea/detalle/<int:idObject>/', auth='public')
     def votar(self, idObject):
         Idea = http.request.env['idea.idea']
         print(idObject)
@@ -27,15 +27,21 @@ class IdeaController(http.Controller):
             'idea': Idea.search([('id', '=', idObject)])[0]
         })
 
-#     @http.route('/idea/idea/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('idea.listing', {
-#             'root': '/idea/idea',
-#             'objects': http.request.env['idea.idea'].search([]),
-#         })
+    @http.route('/idea/votar/<int:idObject>/', auth='user', csrf=False)
+    def list(self, idObject, **kw):
+        Idea = http.request.env['idea.idea']
 
-#     @http.route('/idea/idea/objects/<model("idea.idea"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('idea.object', {
-#             'object': obj
-#         })
+        idea = Idea.search([('id', '=', idObject)])[0]
+
+        print (kw)
+        import pdb; pdb.set_trace()
+        return http.request.render('idea.listar', {
+            'root': '/idea/listar/',
+            'ideas': Idea.search([]),
+        })
+
+    # @http.route('/idea/idea/objects/<model("idea.idea"):obj>/', auth='public')
+    # def object(self, obj, **kw):
+    #     return http.request.render('idea.object', {
+    #         'object': obj
+    #     })

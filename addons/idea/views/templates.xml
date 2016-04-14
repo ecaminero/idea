@@ -16,29 +16,36 @@
                         <td><span t-field="idea.id"/></td>
                         <td><span t-field="idea.nombre"/></td>
                         <td><span t-field="idea.descripcion"/></td>
-                        <td><a href="/idea/votar/1">Votar</a></td>
+                        <td><a href="/idea/detalle/1">Votar</a></td>
                     </tr>
                  </tbody>
              </table>
         </template>
+
         <template id="votar">
             <title>Idea</title>
-             <table class="cr-table" style="height:200px;margin-top:0px">
-                 <thead class="cr-th">
-                    <tr>
-                        <th>Id#</th>
-                        <th>Nombre</th>
-                        <th >Descripcion</th>
-                        <th >Votar</th>
-                    </tr>
-                </thead>
-                 <tbody class="cr-tbody" style="height:100%">
-                        <td><span t-field="idea.id"/></td>
-                        <td><span t-field="idea.nombre"/></td>
-                        <td><span t-field="idea.descripcion"/></td>
-                        <td><input type="text" t-att-name="voto" t-att-value=""/></td>
-                 </tbody>
-             </table>
+             <form string="Button record" action="/idea/votar/1" method="post">
+                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                 <table class="cr-table" style="height:200px;margin-top:0px">
+                     <thead class="cr-th">
+                        <tr>
+                            <th>Id#</th>
+                            <th>Nombre</th>
+                            <th >Descripcion</th>
+                            <th >Votar</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                     <tbody class="cr-tbody" style="height:100%">
+                            <td><span t-field="idea.id"/></td>
+                            <td><span t-field="idea.nombre"/></td>
+                            <td><span t-field="idea.descripcion"/></td>
+                            <td><input type="text" name="voto"  /></td>
+                             <td><button string="Generate password" type="submit">Votar</button></td>
+                     </tbody>
+                 </table>
+
+             </form>
         </template>
         <!-- <template id="listing"> -->
         <!--   <ul> -->
