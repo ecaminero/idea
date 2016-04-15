@@ -1,7 +1,7 @@
 <openerp>
     <data>
         <template id="listar">
-            <title>Ideas</title>
+            <title>Ideass</title>
              <table class="cr-table" style="height:200px;margin-top:0px">
                  <thead class="cr-th">
                     <tr>
