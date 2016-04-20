@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from openerp import http
-
+from datetime import datetime
 
 class IdeaController(http.Controller):
 
@@ -14,12 +14,13 @@ class IdeaController(http.Controller):
 
     @http.route('/idea/listar/', auth='user')
     def listar(self, **kw):
+        dia_actual = datetime.now()
         Idea = http.request.env['idea.idea']
         return http.request.render('idea.listar', {
-            'ideas': Idea.search([])
+            'ideas': Idea.search([('fecha_inicio', '<', dia_actual), ('fecha_fin', '>', dia_actual)])
         })
 
-    @http.route('/idea/detalle/<int:idObject>/', auth='public')
+    @http.route('/idea/detalle/<int:idObject>/', auth='user')
     def votar(self, idObject):
         Idea = http.request.env['idea.idea']
         print(idObject)
@@ -27,7 +28,7 @@ class IdeaController(http.Controller):
             'idea': Idea.search([('id', '=', idObject)])[0]
         })
 
-    @http.route('/idea/votar/<int:idObject>/', auth='user', csrf=False)
+    @http.route('/idea/votar/', auth='user', csrf=False)
     def list(self, idObject, **kw):
         Idea = http.request.env['idea.idea']
 

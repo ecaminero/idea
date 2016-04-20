@@ -2,7 +2,7 @@
     <data>
         <template id="listar">
             <title>Ideass</title>
-             <table class="cr-table" style="height:200px;margin-top:0px">
+             <table class="cr-table">
                  <thead class="cr-th">
                     <tr>
                         <th>Id#</th>
@@ -16,7 +16,7 @@
                         <td><span t-field="idea.id"/></td>
                         <td><span t-field="idea.nombre"/></td>
                         <td><span t-field="idea.descripcion"/></td>
-                        <td><a href="/idea/detalle/1">Votar</a></td>
+                        <td><a t-attf-href="/idea/detalle/{{idea.id}}">Votar</a></td>
                     </tr>
                  </tbody>
              </table>
@@ -24,9 +24,10 @@
 
         <template id="votar">
             <title>Idea</title>
-             <form string="Button record" action="/idea/votar/1" method="post">
+             <form string="Button record" action="/idea/votar/" method="post">
                  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                  <table class="cr-table" style="height:200px;margin-top:0px">
+                     <input type="text" name="voto"  />
                      <thead class="cr-th">
                         <tr>
                             <th>Id#</th>
@@ -44,9 +45,9 @@
                              <td><button string="Generate password" type="submit">Votar</button></td>
                      </tbody>
                  </table>
-
              </form>
         </template>
+
         <!-- <template id="listing"> -->
         <!--   <ul> -->
         <!--     <li t-foreach="objects" t-as="object"> -->

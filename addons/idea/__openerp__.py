@@ -20,7 +20,9 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
-
+    'installable': True,
+    'application': True,
+    'auto_install': True,
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',

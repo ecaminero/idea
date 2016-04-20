@@ -8,6 +8,7 @@ class Idea(models.Model):
 
     nombre = fields.Char(required=True)
     descripcion = fields.Text()
+    opiniones = fields.Text()
     grupo = fields.Integer()
     fecha_inicio = fields.Date(required=True)
     fecha_fin = fields.Date(required=True)

@@ -1,29 +1,34 @@
 <openerp>
   <data>
     <!-- explicit list view definition -->
-    <!--
     <record model="ir.ui.view" id="idea.list">
       <field name="name">idea list</field>
       <field name="model">idea.idea</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="nombre"/>
+          <field name="descripcion"/>
+          <field name="calificacion"/>
+          <field name="create_uid"/>
         </tree>
       </field>
     </record>
-    -->
 
     <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="idea.action_window">
+    <record model="ir.actions.act_window" id="idea.list_action">
       <field name="name">idea window</field>
       <field name="res_model">idea.idea</field>
+      <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first course
+            </p>
+        </field>
     </record>
 
 
     <!-- server action to the one above -->
-    <!--
+
     <record model="ir.actions.server" id="idea.action_server">
       <field name="name">idea server</field>
       <field name="model_id" ref="model_idea_idea"/>
@@ -35,7 +40,6 @@
         }
       </field>
     </record>
-    -->
 
     <!-- Top menu item -->
     <menuitem name="idea" id="idea.menu_root"/>
@@ -43,7 +47,8 @@
     <menuitem name="Acciones" id="idea.menu_1" parent="idea.menu_root"/>
     <!-- actions -->
     <menuitem name="List" id="idea.menu_1_list" parent="idea.menu_1"
-              action="idea.action_window"/>
+              action="idea.list_action"/>
+
 
   </data>
 </openerp>
